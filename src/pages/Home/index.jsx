@@ -6,22 +6,22 @@ const API_URL = "http://www.omdbapi.com?apikey=a6370745";
 
 function Home() {
   const [movies, setMovies] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("spider"); // تعيين قيمة افتراضية
+  const [searchTerm, setSearchTerm] = useState("spider");
 
   useEffect(() => {
-    if (searchTerm.trim() === "") return; // منع البحث إذا لم يكن هناك نص
-    searchMovie(searchTerm);
-  }, [searchTerm]); // يتم التحديث عند تغيير `searchTerm`
+    // إذا كان البحث فارغًا، استخدم "spider"
+    searchMovie(searchTerm.trim() === "" ? "spider" : searchTerm);
+  }, [searchTerm]);
 
   const searchMovie = async (title) => {
     try {
       const response = await fetch(`${API_URL}&s=${title}`);
       const data = await response.json();
-      
+
       if (data.Search) {
         setMovies(data.Search);
       } else {
-        setMovies([]); // إفراغ النتائج عند عدم العثور على أفلام
+        setMovies([]);
       }
     } catch (error) {
       console.error("Error fetching movies:", error);
