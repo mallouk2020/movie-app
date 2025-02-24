@@ -1,0 +1,86 @@
+.movie-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #212426;
+}
+  
+.movie-details {
+    background: linear-gradient(
+        90deg,
+        rgb(247, 122, 20) 20%,
+        rgba(27, 7, 119, 0.473) 100%
+    ); 
+    
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+}
+  
+
+  
+.movie-poster img {
+    border-radius: 20px;
+}
+
+
+  
+.movie-description p strong {
+    font-weight: bold;
+    color: #9c9c9c; 
+}
+  
+.movie-info {
+    display: flex;
+}
+  
+.movie-info > div {
+    flex: 1;
+    padding: 10px;
+}
+  
+.movie-info .movie-description p:nth-child(5) {
+    font-style: italic;
+}
+  
+.movie-info .movie-description p:nth-child(6) {
+    font-style: italic;
+}
+
+.movie-title  h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #682acc; 
+}
+.movie-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 20px auto;
+  }
+
+.movie-description p {
+    background-color: rgba(255, 255, 255, 0.2); /* خلفية شفافة */
+    padding: 15px;
+    display: flex;
+    align-items: center; /* تمركز النصوص */
+    justify-content: space-between; /* توزيع النصوص */
+    transition: background-color 0.3s ease; /* تأثير عند hover */
+  }
+  
+  .movie-description p:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* تغيير الخلفية عند hover */
+  }
+  
+  .movie-description p strong {
+    font-weight: bold;
+    color: #ffffff; /* لون العنوان أبيض */
+    margin-right: 10px; /* مسافة بين العنوان والقيمة */
+  }
+  
+  .movie-description p span {
+    color: #e0e0e0; /* لون القيمة فاتح */
+  }

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import MovieDetails from "../../components/MovieDetails";
 const API_URL = "http://www.omdbapi.com?apikey=a6370745";
 
 export default function Details() {
@@ -24,13 +24,14 @@ export default function Details() {
         console.error(error);
       }
     };
-
     fetchSingleMovie();
   }, [title]);
+  console.log( "ssssss",singleMovie)
 
   return (
     <div>
-      {/* <MovieDetails singleMovie={singleMovie} /> */}
+
+      <MovieDetails singleMovie={singleMovie} />
     </div>
   );
 }

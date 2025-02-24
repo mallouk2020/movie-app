@@ -6,7 +6,7 @@ import Details from "./pages/Details";
 function App() {
   return (
     <Routes>
-      <Route path="/Home" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/details/:title" element={<Details />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

@@ -1,18 +1,20 @@
-import React from "react";
 import SearchIcon from "../img/search.svg";
-export default function Search({ searchTerm, setSearchTerm, searchMovie }) {
+import PropTypes from "prop-types";
+
+export default function Search({ searchTerm, setSearchTerm }) {
   return (
     <div className="search">
       <input
         placeholder="Search for Your Favorite Movie"
         value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
+        onChange={(e) => setSearchTerm(e.target.value)} // يتم البحث مباشرة عند الكتابة
       />
-      <img
-        src={SearchIcon}
-        alt="search"
-        onClick={() => searchMovie(searchTerm)}
-      />
+      <img src={SearchIcon} alt="search" />
     </div>
   );
 }
+
+Search.propTypes = {
+  searchTerm: PropTypes.string.isRequired,
+  setSearchTerm: PropTypes.func.isRequired,
+};

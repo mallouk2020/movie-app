@@ -1,7 +1,9 @@
-import React from "react";
+// import React from "react";
 import { Link } from "react-router-dom";
 
+// eslint-disable-next-line react/prop-types
 export default function MovieCard({ movie, showDetails }) {
+  // eslint-disable-next-line react/prop-types
   const { imdbID, Year, Poster, Title, Type } = movie;
 
   return (
