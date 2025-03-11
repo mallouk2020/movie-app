@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import Search from "../../components/Search";
 import MovieCard from "../../components/MovieCard";
 
-const API_URL = "http://www.omdbapi.com?apikey=a6370745";
+const API_URL = "https://www.omdbapi.com?apikey=a6370745";
 
 function Home() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("spider");
 
   useEffect(() => {
-    // إذا كان البحث فارغًا، استخدم "spider"
+    // إذا كان البحث فارغًا 
     searchMovie(searchTerm.trim() === "" ? "spider" : searchTerm);
   }, [searchTerm]);
 
